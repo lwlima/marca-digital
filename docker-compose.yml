@@ -1,0 +1,60 @@
+services:
+  dev:
+    build:
+      context: .
+      target: development
+    ports:
+      - "4321:4321"
+    volumes:
+      - .:/app
+      - node_modules:/app/node_modules
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      NODE_ENV: development
+      CHOKIDAR_USEPOLLING: "true"
+      PUBLIC_SITE_URL: ${PUBLIC_SITE_URL:-https://marcadigital.dev.br}
+      PUBLIC_GA_MEASUREMENT_ID: ${PUBLIC_GA_MEASUREMENT_ID:-}
+
+  prod:
+    build:
+      context: .
+      target: production
+      args:
+        PUBLIC_GA_MEASUREMENT_ID: ${PUBLIC_GA_MEASUREMENT_ID:-}
+        PUBLIC_SITE_URL: ${PUBLIC_SITE_URL:-https://marcadigital.dev.br}
+    ports:
+      - "8080:80"
+    profiles:
+      - production
+
+  build:
+    build:
+      context: .
+      target: build
+      args:
+        PUBLIC_GA_MEASUREMENT_ID: ${PUBLIC_GA_MEASUREMENT_ID:-}
+        PUBLIC_SITE_URL: ${PUBLIC_SITE_URL:-https://marcadigital.dev.br}
+    volumes:
+      - ./dist:/app/dist
+    command: sh -c "npm run build"
+    profiles:
+      - build
+
+  test:
+    build:
+      context: .
+      target: test
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      CI: "true"
+    ipc: host
+    init: true
+    profiles:
+      - test
+
+volumes:
+  node_modules:

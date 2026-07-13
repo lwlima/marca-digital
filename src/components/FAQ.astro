@@ -1,0 +1,168 @@
+---
+import { faqItems } from '../data/faq';
+---
+
+<section
+  id="faq"
+  class="bg-slate-50 py-16 sm:py-20"
+  aria-labelledby="faq-heading"
+>
+  <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+    <div class="text-center">
+      <p class="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-brand-600">
+        Dúvidas
+      </p>
+      <h2
+        id="faq-heading"
+        class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl"
+      >
+        Perguntas Frequentes
+      </h2>
+    </div>
+    <p class="mx-auto mt-4 max-w-xl text-center text-base leading-relaxed text-slate-600">
+      As dúvidas mais comuns de quem está avaliando a Consultoria de Performance.
+    </p>
+
+    <div class="mt-8 space-y-3">
+      {
+        faqItems.map((item) => (
+          <details class="group overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-all duration-300 ease-out open:border-brand-200 open:shadow-lg open:shadow-brand-100/60 open:ring-1 open:ring-brand-100 hover:border-brand-200 hover:bg-brand-50/40 hover:shadow-md">
+            <summary class="flex w-full cursor-pointer list-none items-center justify-between gap-4 border-l-4 border-l-transparent px-5 py-4 text-left transition-all duration-300 ease-out group-open:border-l-brand-600 group-open:bg-gradient-to-r group-open:from-brand-50 group-open:via-slate-50 group-open:to-white sm:px-6 sm:py-5 hover:border-l-brand-400 [&::-webkit-details-marker]:hidden">
+              <span class="text-sm font-semibold text-slate-800 transition-colors duration-300 group-open:text-slate-900 sm:text-base">
+                {item.question}
+              </span>
+              <span
+                class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-600 transition-all duration-300 ease-out group-open:scale-110 group-open:bg-brand-600 group-open:text-white group-open:shadow-md group-open:shadow-brand-200"
+                aria-hidden="true"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="transition-transform duration-300 ease-out group-open:rotate-180"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </span>
+            </summary>
+            <div class="faq-panel">
+              <div class="faq-panel-inner min-h-0 overflow-hidden">
+                <div class="border-t border-brand-100 bg-gradient-to-b from-brand-50/80 to-slate-50 px-5 py-4 text-sm leading-relaxed text-slate-600 sm:px-6 sm:py-5 sm:text-base">
+                  {item.answer}
+                </div>
+              </div>
+            </div>
+          </details>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  #faq .faq-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  #faq details[open]:not(.faq-closing):not(.faq-opening) .faq-panel {
+    grid-template-rows: 1fr;
+  }
+
+  #faq details.faq-opening .faq-panel,
+  #faq details.faq-closing .faq-panel {
+    grid-template-rows: 0fr;
+  }
+
+  #faq .faq-panel-inner > div {
+    opacity: 0;
+    transform: translateY(-6px);
+    transition:
+      opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+      transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  #faq details[open]:not(.faq-closing):not(.faq-opening) .faq-panel-inner > div {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.1s;
+  }
+
+  #faq details.faq-opening .faq-panel-inner > div,
+  #faq details.faq-closing .faq-panel-inner > div {
+    opacity: 0;
+    transform: translateY(-4px);
+    transition-delay: 0s;
+  }
+</style>
+
+<script>
+  const FAQ_ANIMATION_MS = 450;
+  const items = [...document.querySelectorAll('#faq details')];
+
+  function trackToggle(details, isOpen) {
+    if (typeof window.gtag !== 'function') return;
+
+    const question =
+      details.querySelector('summary span')?.textContent?.trim() ?? '';
+
+    window.gtag('event', 'faq_toggle', {
+      event_category: 'engagement',
+      event_label: question,
+      faq_open: isOpen,
+    });
+  }
+
+  function closeDetails(details) {
+    if (!details.open || details.classList.contains('faq-closing')) return;
+
+    details.classList.add('faq-closing');
+    trackToggle(details, false);
+
+    window.setTimeout(() => {
+      details.classList.remove('faq-closing');
+      details.open = false;
+    }, FAQ_ANIMATION_MS);
+  }
+
+  function openDetails(details) {
+    details.classList.add('faq-opening');
+    details.open = true;
+
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        details.classList.remove('faq-opening');
+      });
+    });
+
+    trackToggle(details, true);
+  }
+
+  items.forEach((details) => {
+    const summary = details.querySelector('summary');
+
+    summary?.addEventListener('click', (event) => {
+      event.preventDefault();
+
+      if (details.classList.contains('faq-closing')) return;
+
+      if (details.open) {
+        closeDetails(details);
+        return;
+      }
+
+      items.forEach((other) => {
+        if (other !== details) closeDetails(other);
+      });
+
+      openDetails(details);
+    });
+  });
+</script>

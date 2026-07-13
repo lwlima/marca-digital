@@ -1,0 +1,67 @@
+---
+const measurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
+---
+
+{
+  measurementId && (
+    <script is:inline>
+      (function () {
+        if (typeof window.gtag !== 'function') return;
+
+        const scrollMarks = new Set();
+
+        const whatsappEvents = {
+          navbar: 'whatsapp_click_navbar',
+          hero: 'whatsapp_click_hero',
+          floating: 'whatsapp_click_floating',
+          mid_cta: 'whatsapp_click_mid_cta',
+          final_cta: 'whatsapp_click_final_cta',
+          problem: 'whatsapp_click_problem',
+        };
+
+        function trackScrollDepth() {
+          const scrollable =
+            document.documentElement.scrollHeight - window.innerHeight;
+          if (scrollable <= 0) return;
+
+          const percent = Math.round((window.scrollY / scrollable) * 100);
+          const milestones = [25, 50, 75, 90];
+
+          for (const milestone of milestones) {
+            if (percent >= milestone && !scrollMarks.has(milestone)) {
+              scrollMarks.add(milestone);
+              window.gtag('event', 'scroll_depth', {
+                event_category: 'engagement',
+                percent_scrolled: milestone,
+              });
+            }
+          }
+        }
+
+        document.addEventListener(
+          'click',
+          function (event) {
+            const target = event.target;
+            if (!(target instanceof Element)) return;
+
+            const link = target.closest('[data-whatsapp-button]');
+            if (!link) return;
+
+            const location = link.getAttribute('data-whatsapp-button');
+            if (!location || !(location in whatsappEvents)) return;
+
+            window.gtag('event', whatsappEvents[location], {
+              event_category: 'conversion',
+              button_location: location,
+              link_url: link.getAttribute('href') ?? '',
+            });
+          },
+          { capture: true },
+        );
+
+        window.addEventListener('scroll', trackScrollDepth, { passive: true });
+        trackScrollDepth();
+      })();
+    </script>
+  )
+}

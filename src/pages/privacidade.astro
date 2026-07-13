@@ -1,0 +1,121 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { siteConfig } from '../config/site';
+---
+
+<BaseLayout
+  title={`Política de Privacidade — ${siteConfig.name}`}
+  description={`Política de Privacidade e tratamento de dados pessoais da ${siteConfig.name}, em conformidade com a LGPD.`}
+  path="/privacidade"
+  noindex={true}
+>
+  <main class="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
+    <h1 class="text-3xl font-bold text-slate-900">Política de Privacidade</h1>
+    <p class="mt-2 text-sm text-slate-500">
+      Última atualização: {new Date().toLocaleDateString('pt-BR')}
+    </p>
+
+    <div class="prose prose-slate mt-8 max-w-none space-y-6 text-slate-700">
+      <section>
+        <h2 class="text-xl font-semibold text-slate-900">1. Quem somos</h2>
+        <p>
+          Esta Política de Privacidade descreve como <strong>{siteConfig.name}</strong>,
+          inscrita no CNPJ <strong>{siteConfig.cnpj}</strong>, representada por{' '}
+          <strong>{siteConfig.owner}</strong>, trata dados pessoais no site{' '}
+          <a href={siteConfig.url} class="text-brand-600 hover:underline">{siteConfig.url}</a>.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-slate-900">2. Dados que coletamos</h2>
+        <p>Ao navegar neste site, podemos coletar automaticamente:</p>
+        <ul class="list-disc space-y-1 pl-6">
+          <li>Endereço IP (anonimizado quando possível)</li>
+          <li>Tipo de navegador, dispositivo e sistema operacional</li>
+          <li>Páginas visitadas, tempo de permanência e origem do acesso (UTM/referrer)</li>
+          <li>Interações com botões e seções (ex.: cliques no WhatsApp, scroll, FAQ)</li>
+        </ul>
+        <p class="mt-3">
+          Ao clicar no WhatsApp, você é direcionado para um serviço externo (Meta/WhatsApp).
+          Não coletamos o conteúho das suas mensagens por este site.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-slate-900">3. Finalidade e base legal (LGPD)</h2>
+        <p>Utilizamos os dados para:</p>
+        <ul class="list-disc space-y-1 pl-6">
+          <li>Medir desempenho e conversão da landing page</li>
+          <li>Entender origem do tráfego e melhorar campanhas</li>
+          <li>Garantir segurança e funcionamento do site</li>
+        </ul>
+        <p class="mt-3">
+          A base legal é o <strong>legítimo interesse</strong> (Art. 7º, IX) e/ou{' '}
+          <strong>consentimento</strong> (Art. 7º, I) para cookies analíticos, conforme
+          sua escolha no banner de cookies.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-slate-900">4. Cookies e ferramentas de terceiros</h2>
+        <p>
+          Se você aceitar cookies analíticos, utilizamos o <strong>Google Analytics 4</strong>
+          para estatísticas de uso. O Google pode processar dados conforme sua própria política.
+          Você pode recusar cookies no banner exibido no site.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-slate-900">5. Compartilhamento</h2>
+        <p>
+          Não vendemos dados pessoais. Podemos compartilhar informações apenas com
+          provedores necessários à operação (ex.: hospedagem, Google Analytics) e quando
+          exigido por lei.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-slate-900">6. Seus direitos</h2>
+        <p>
+          Nos termos da LGPD, você pode solicitar confirmação de tratamento, acesso,
+          correção, anonimização, portabilidade, eliminação ou revogação do consentimento.
+        </p>
+        <p class="mt-3">
+          Contato:{' '}
+          <a href={`mailto:${siteConfig.email}`} class="text-brand-600 hover:underline">
+            {siteConfig.email}
+          </a>{' '}
+          ou WhatsApp{' '}
+          <a
+            href={`https://wa.me/${siteConfig.whatsapp}`}
+            class="text-brand-600 hover:underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            (19) 99283-9122
+          </a>
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-slate-900">7. Retenção e segurança</h2>
+        <p>
+          Mantemos dados pelo tempo necessário às finalidades descritas ou conforme exigência
+          legal. Adotamos medidas técnicas razoáveis para proteger as informações.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-slate-900">8. Alterações</h2>
+        <p>
+          Esta política pode ser atualizada a qualquer momento. Recomendamos revisá-la
+          periodicamente.
+        </p>
+      </section>
+    </div>
+
+    <p class="mt-10">
+      <a href="/" class="text-brand-600 hover:underline">← Voltar para a página inicial</a>
+    </p>
+  </main>
+</BaseLayout>

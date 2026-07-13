@@ -1,0 +1,46 @@
+---
+import '@fontsource/inter/400.css';
+import '@fontsource/inter/500.css';
+import '@fontsource/inter/600.css';
+import '@fontsource/inter/700.css';
+import '@fontsource/inter/800.css';
+import '../styles/global.css';
+import { siteConfig } from '../config/site';
+import SeoHead from '../components/seo/SeoHead.astro';
+import TrackInteractions from '../components/analytics/TrackInteractions.astro';
+import CookieConsent from '../components/CookieConsent';
+
+const measurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
+
+interface Props {
+  title?: string;
+  description?: string;
+  path?: string;
+  noindex?: boolean;
+}
+
+const {
+  title = siteConfig.title,
+  description = siteConfig.description,
+  path = Astro.url.pathname,
+  noindex = false,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" sizes="32x32" href={siteConfig.assets.favicon} />
+    <link rel="icon" type="image/png" sizes="192x192" href={siteConfig.assets.favicon} />
+    <link rel="apple-touch-icon" sizes="180x180" href={siteConfig.assets.faviconApple} />
+    <title>{title}</title>
+    <SeoHead title={title} description={description} path={path} noindex={noindex} />
+  </head>
+  <body class="min-h-screen bg-white">
+    <slot />
+    <TrackInteractions />
+    <CookieConsent client:load measurementId={measurementId} />
+  </body>
+</html>
