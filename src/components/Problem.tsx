@@ -27,7 +27,7 @@ export default function Problem() {
                 <div className="flex-1">
                   <div className="mb-1.5 flex justify-between text-xs">
                     <span>Carregando site...</span>
-                    <span className="font-semibold text-red-500">
+                    <span className="font-semibold text-red-700">
                       {problemStats.slowLoadSeconds}s
                     </span>
                   </div>
@@ -38,7 +38,7 @@ export default function Problem() {
               </div>
 
               <div className="flex items-center gap-3 text-sm text-slate-500">
-                <MapPinOff className="h-5 w-5 shrink-0 text-red-500" />
+                <MapPinOff className="h-5 w-5 shrink-0 text-red-700" />
                 <span>Não encontrado no Google Maps</span>
               </div>
             </div>

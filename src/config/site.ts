@@ -5,6 +5,7 @@ const siteUrl = import.meta.env.PUBLIC_SITE_URL ?? 'https://marcadigital.dev.br'
 export const brandAssets = {
   logoFull: '/logo-extensa.webp',
   logoFullNavbar: '/logo-extensa-navbar.webp',
+  logoFullNavbarLg: '/logo-extensa-navbar-400.webp',
   logoSymbol: '/logo-mark.webp',
   logoFullWithBg: '/logo-extensa-on-dark.webp',
   logoSymbolWithBg: '/logo-mark-on-dark.webp',

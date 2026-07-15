@@ -13,11 +13,13 @@ export default function Header() {
         >
           <img
             src={siteConfig.assets.logoFullNavbar}
+            srcSet={`${siteConfig.assets.logoFullNavbar} 240w, ${siteConfig.assets.logoFullNavbarLg} 400w`}
+            sizes="(min-width: 1024px) 170px, (min-width: 640px) 140px, 112px"
             alt={siteConfig.shortName}
-            width={400}
-            height={94}
+            width={240}
+            height={56}
             decoding="async"
-            className="h-7 w-auto max-w-[min(11rem,48vw)] object-contain object-left sm:h-9 sm:max-w-none md:h-10 lg:h-11"
+            className="h-7 w-auto max-w-[min(11rem,48vw)] object-contain object-left sm:h-8 sm:max-w-none md:h-9 lg:h-10"
           />
         </a>
 
