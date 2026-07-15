@@ -14,8 +14,8 @@ export default function Header() {
           <img
             src={siteConfig.assets.logoFullNavbar}
             alt={siteConfig.shortName}
-            width={480}
-            height={113}
+            width={400}
+            height={94}
             decoding="async"
             className="h-7 w-auto max-w-[min(11rem,48vw)] object-contain object-left sm:h-9 sm:max-w-none md:h-10 lg:h-11"
           />

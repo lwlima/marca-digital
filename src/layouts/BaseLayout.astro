@@ -8,7 +8,7 @@ import '../styles/global.css';
 import { siteConfig } from '../config/site';
 import SeoHead from '../components/seo/SeoHead.astro';
 import TrackInteractions from '../components/analytics/TrackInteractions.astro';
-import CookieConsent from '../components/CookieConsent';
+import CookieConsent from '../components/CookieConsent.astro';
 
 const measurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
 
@@ -42,6 +42,6 @@ const {
   <body class="min-h-screen bg-white">
     <slot />
     <TrackInteractions />
-    <CookieConsent client:load measurementId={measurementId} />
+    <CookieConsent measurementId={measurementId} />
   </body>
 </html>

@@ -52,7 +52,7 @@ export default function Solution() {
                 className="mb-5 inline-flex rounded-lg bg-brand-600/20 p-3"
                 aria-hidden="true"
               >
-                <Icon className="h-7 w-7 text-brand-400" />
+                <Icon className="h-7 w-7 text-brand-300" />
               </div>
               <h3 className="text-lg font-semibold sm:text-xl">{title}</h3>
               <p className="mt-3 text-sm leading-relaxed text-slate-300 sm:text-base">

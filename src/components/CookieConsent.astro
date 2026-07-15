@@ -1,0 +1,99 @@
+---
+interface Props {
+  measurementId?: string;
+}
+
+const { measurementId } = Astro.props;
+---
+
+<div
+  id="cookie-consent"
+  hidden
+  role="dialog"
+  aria-labelledby="cookie-consent-title"
+  aria-describedby="cookie-consent-description"
+  data-measurement-id={measurementId ?? ''}
+  class="fixed inset-x-0 bottom-0 z-[60] border-t border-brand-800 bg-brand-950 p-4 shadow-2xl sm:p-6"
+>
+  <div
+    class="mx-auto flex max-w-6xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"
+  >
+    <div class="text-sm leading-relaxed text-slate-200">
+      <p id="cookie-consent-title" class="font-semibold text-white">
+        Cookies e privacidade
+      </p>
+      <p id="cookie-consent-description" class="mt-1">
+        Utilizamos cookies analíticos para entender como você usa o site e melhorar
+        nossos serviços. Você pode aceitar ou recusar o rastreamento.{" "}
+        <a
+          href="/privacidade"
+          class="text-brand-300 underline hover:text-brand-200"
+        >
+          Política de Privacidade
+        </a>
+      </p>
+    </div>
+    <div class="flex shrink-0 flex-col gap-2 sm:flex-row">
+      <button
+        type="button"
+        data-cookie-action="reject"
+        class="rounded-lg border border-brand-700 px-4 py-2.5 text-sm font-semibold text-slate-200 transition-colors hover:bg-brand-900"
+      >
+        Recusar
+      </button>
+      <button
+        type="button"
+        data-cookie-action="accept"
+        class="rounded-lg bg-brand-600 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-700"
+      >
+        Aceitar cookies
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  import {
+    getCookieConsent,
+    loadGoogleAnalytics,
+    setCookieConsent,
+  } from '../lib/loadAnalytics';
+
+  const banner = document.getElementById('cookie-consent');
+  const measurementId = banner?.dataset.measurementId || undefined;
+
+  function hideBanner() {
+    banner?.setAttribute('hidden', '');
+  }
+
+  function showBanner() {
+    banner?.removeAttribute('hidden');
+  }
+
+  const consent = getCookieConsent();
+  if (consent === 'accepted' && measurementId) {
+    loadGoogleAnalytics(measurementId);
+  } else if (!consent) {
+    showBanner();
+  }
+
+  banner?.addEventListener('click', (event) => {
+    const target = event.target;
+    if (!(target instanceof Element)) return;
+    const button = target.closest('[data-cookie-action]');
+    if (!(button instanceof HTMLElement)) return;
+
+    const action = button.dataset.cookieAction;
+    if (action === 'accept') {
+      setCookieConsent('accepted');
+      hideBanner();
+      if (measurementId) loadGoogleAnalytics(measurementId);
+      return;
+    }
+
+    if (action === 'reject') {
+      setCookieConsent('rejected');
+      hideBanner();
+    }
+  });
+</script>

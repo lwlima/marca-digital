@@ -8,7 +8,7 @@ export default function SectionEyebrow({ children, dark = false, className = '' 
   return (
     <p
       className={`text-xs font-semibold uppercase tracking-[0.2em] ${
-        dark ? 'text-brand-400' : 'text-brand-600'
+        dark ? 'text-brand-300' : 'text-brand-600'
       } ${className}`}
     >
       {children}

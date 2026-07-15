@@ -19,7 +19,7 @@ export default function Footer() {
           </span>
           <a
             href={`mailto:${siteConfig.email}`}
-            className="text-slate-400 underline decoration-brand-800 underline-offset-2 transition-colors hover:text-white"
+            className="text-slate-300 underline decoration-brand-800 underline-offset-2 transition-colors hover:text-white"
           >
             {siteConfig.email}
           </a>
@@ -28,7 +28,7 @@ export default function Footer() {
           </span>
           <a
             href="/privacidade"
-            className="text-slate-400 underline decoration-brand-800 underline-offset-2 transition-colors hover:text-white"
+            className="text-slate-300 underline decoration-brand-800 underline-offset-2 transition-colors hover:text-white"
           >
             Política de Privacidade
           </a>
