@@ -3,13 +3,16 @@ import type { WhatsAppButtonLocation } from '../config/analytics';
 const siteUrl = import.meta.env.PUBLIC_SITE_URL ?? 'https://marcadigital.dev.br';
 
 export const brandAssets = {
-  logoFull: '/logo-extensa-fundo-branco.png',
-  logoSymbol: '/logo-azul-fundo-branca.png',
-  logoFullWithBg: '/logo-extensa-fundo-azul.png',
-  logoSymbolWithBg: '/logo-branca-fundo-azul.png',
-  ogImage: '/og-image.png',
-  favicon: '/logo-azul-fundo-branca.png',
-  faviconApple: '/logo-branca-fundo-azul.png',
+  logoFull: '/logo-extensa.webp',
+  logoFullNavbar: '/logo-extensa-navbar.webp',
+  logoSymbol: '/logo-mark.webp',
+  logoFullWithBg: '/logo-extensa-on-dark.webp',
+  logoSymbolWithBg: '/logo-mark-on-dark.webp',
+  ogImage: '/og-image.jpg',
+  favicon: '/favicon.svg',
+  favicon32: '/favicon-32.png',
+  favicon192: '/favicon-192.png',
+  faviconApple: '/apple-touch-icon.png',
   hero: '/hero.webp',
 } as const;
 

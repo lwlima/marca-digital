@@ -8,9 +8,10 @@ test.describe('Landing Page Marca Digital', () => {
   });
 
   test('exibe o logo no header', async ({ page }) => {
-    const headerLogo = page.locator('header a[aria-label*="Marca Digital"] img');
+    const headerLink = page.getByRole('link', { name: /Marca Digital.*início/i });
+    const headerLogo = headerLink.locator('img');
     await expect(headerLogo).toBeVisible();
-    await expect(page.getByRole('link', { name: /Marca Digital.*início/i })).toContainText('Marca Digital');
+    await expect(headerLogo).toHaveAttribute('alt', /Marca Digital/);
   });
 
   test('exibe a imagem do hero', async ({ page }) => {

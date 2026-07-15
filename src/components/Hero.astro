@@ -1,13 +1,13 @@
 ---
-import { Image } from 'astro:assets';
-import heroImage from '../assets/hero.webp';
+import { siteConfig } from '../config/site';
 import HeroContent from './HeroContent';
 
 const sectionGradient =
   'linear-gradient(to right, rgba(3,13,24,0.96) 0%, rgba(3,13,24,0.94) 10%, rgba(3,13,24,0.88) 16%, rgba(3,13,24,0.78) 22%, rgba(3,13,24,0.65) 28%, rgba(3,13,24,0.50) 34%, rgba(3,13,24,0.36) 40%, rgba(3,13,24,0.22) 46%, rgba(3,13,24,0.11) 52%, rgba(3,13,24,0.04) 58%, transparent 66%)';
 
+/* Soft LTR + bottom veil so the photo stays visible on mobile while text remains readable */
 const mobileSectionGradient =
-  'linear-gradient(to right, rgba(3,13,24,0.96) 0%, rgba(3,13,24,0.93) 8%, rgba(3,13,24,0.87) 16%, rgba(3,13,24,0.78) 24%, rgba(3,13,24,0.67) 32%, rgba(3,13,24,0.55) 40%, rgba(3,13,24,0.43) 48%, rgba(3,13,24,0.32) 56%, rgba(3,13,24,0.22) 64%, rgba(3,13,24,0.14) 72%, rgba(3,13,24,0.08) 80%, rgba(3,13,24,0.04) 88%, transparent 96%)';
+  'linear-gradient(to right, rgba(3,13,24,0.88) 0%, rgba(3,13,24,0.72) 28%, rgba(3,13,24,0.42) 48%, rgba(3,13,24,0.18) 68%, rgba(3,13,24,0.06) 82%, transparent 94%), linear-gradient(to top, rgba(3,13,24,0.55) 0%, transparent 42%)';
 ---
 
 <section
@@ -16,15 +16,15 @@ const mobileSectionGradient =
   aria-labelledby="hero-heading"
 >
   <div class="absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
-    <Image
-      src={heroImage}
+    <img
+      src={siteConfig.assets.hero}
       alt="Notebook com dashboard de desempenho digital sobre uma mesa"
-      widths={[640, 960, 1280, 1698]}
-      sizes="100vw"
+      width="2048"
+      height="768"
       loading="eager"
       fetchpriority="high"
       decoding="async"
-      class="h-full w-full object-cover object-[62%_40%] lg:object-right"
+      class="absolute inset-0 h-full w-full min-h-full min-w-full object-cover object-[72%_42%] sm:object-[68%_40%] lg:object-right"
     />
   </div>
 
