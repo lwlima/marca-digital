@@ -1,0 +1,200 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { siteConfig } from '../config/site';
+
+const foro = `${siteConfig.city}/${siteConfig.state}`;
+---
+
+<BaseLayout
+  title={`Termos de Uso — ${siteConfig.name}`}
+  description={`Termos de uso e condições gerais dos serviços da ${siteConfig.shortName}: desenvolvimento de sites, hospedagem, manutenção e diagnóstico.`}
+  path="/termos"
+  noindex={true}
+>
+  <main class="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
+    <h1 class="text-3xl font-bold text-slate-900">Termos de Uso</h1>
+    <p class="mt-2 text-sm text-slate-500">Última atualização: 15/07/2026</p>
+    <p class="mt-4 text-base leading-relaxed text-slate-600">
+      Estas condições gerais descrevem como a <strong>{siteConfig.shortName}</strong>{' '}
+      presta serviços. Cada cliente ainda recebe <strong>proposta comercial</strong> e, quando
+      aplicável, <strong>contrato</strong> com escopo e valores específicos — esses documentos
+      prevalecem em caso de divergência sobre o projeto contratado.
+    </p>
+
+    <div class="prose prose-slate mt-8 max-w-none space-y-6 text-slate-700">
+      <section>
+        <h2 class="text-xl font-semibold text-slate-900">1. Quem somos</h2>
+        <p>
+          <strong>{siteConfig.shortName}</strong> (CNPJ <strong>{siteConfig.cnpj}</strong>),
+          representada por <strong>{siteConfig.owner}</strong>, com atuação em{' '}
+          <strong>{foro}</strong>. Contato:{' '}
+          <a href={`mailto:${siteConfig.email}`} class="text-brand-600 hover:underline">
+            {siteConfig.email}
+          </a>{' '}
+          ou WhatsApp{' '}
+          <a
+            href={`https://wa.me/${siteConfig.whatsapp}`}
+            class="text-brand-600 hover:underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            (19) 99283-9122
+          </a>
+          .
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-slate-900">2. Serviços que oferecemos</h2>
+        <p>De forma geral, podemos prestar:</p>
+        <ul class="list-disc space-y-1 pl-6">
+          <li>
+            Desenvolvimento de sites nos pacotes Landing, Institucional e Completo (valores de
+            referência no site)
+          </li>
+          <li>Sistemas e e-commerce sob orçamento específico</li>
+          <li>
+            Hospedagem gerenciada e manutenção mensal (domínio, e-mail profissional, SSL, backup
+            e CDN quando aplicável), com franquia de horas
+          </li>
+          <li>Configuração de Google Analytics</li>
+          <li>
+            No pacote Completo: configuração/gestão do Perfil da Empresa no Google, conforme
+            proposta
+          </li>
+          <li>
+            Diagnóstico gratuito opcional para quem já tem site (PageSpeed em PDF, em até 24 horas
+            úteis) — apenas apontamentos, sem correções inclusas
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-slate-900">3. O que não fazemos</h2>
+        <ul class="list-disc space-y-1 pl-6">
+          <li>Anúncios pagos (Google Ads, Meta Ads e similares)</li>
+          <li>Criação de identidade visual / branding / logotipo</li>
+          <li>Gestão de redes sociais ou produção contínua de posts</li>
+          <li>
+            Manutenção isolada de sites desenvolvidos e hospedados por terceiros (sem migrar o
+            projeto para nosso fluxo)
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-slate-900">4. Valores, pacotes e pagamento</h2>
+        <p>
+          Os valores de referência publicados neste site podem ser ajustados na proposta, conforme
+          escopo. Em regra:
+        </p>
+        <ul class="list-disc space-y-1 pl-6">
+          <li>
+            <strong>Setup</strong> (desenvolvimento): pagamento único, nas condições da proposta
+          </li>
+          <li>
+            <strong>Mensalidade</strong>: hospedagem + manutenção com franquia de horas do pacote
+          </li>
+          <li>
+            <strong>Plano mensal</strong>: valor cheio, sem fidelidade mínima; cancelamento com
+            aviso prévio de 30 dias
+          </li>
+          <li>
+            <strong>Plano anual</strong>: desconto de 15% no PIX à vista ou 5% no cartão em até
+            12x; em cancelamento antecipado <strong>não há reembolso</strong> — o acesso aos
+            serviços permanece até o fim dos 12 meses já pagos
+          </li>
+          <li>
+            Horas além da franquia: <strong>R$ 100/hora</strong>, com aprovação prévia; horas não
+            usadas não acumulam para o mês seguinte
+          </li>
+        </ul>
+        <p class="mt-3">
+          Atraso de pagamento pode gerar suspensão dos serviços e, persistindo, rescisão, conforme
+          o contrato.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-slate-900">5. Prazos e materiais do cliente</h2>
+        <p>
+          O prazo de entrega do site consta na proposta. Ele fica suspenso enquanto faltarem
+          conteúdos, acessos, aprovações ou informações de responsabilidade do cliente.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-slate-900">6. Domínio e propriedade</h2>
+        <ul class="list-disc space-y-1 pl-6">
+          <li>
+            O <strong>domínio</strong> deve ficar em nome do cliente. Não registramos domínio do
+            cliente em nosso nome.
+          </li>
+          <li>
+            Com o setup quitado, o cliente detém o conteúdo e o site entregue como produto,
+            observados os termos do contrato.
+          </li>
+          <li>
+            Podemos reutilizar componentes técnicos próprios (não exclusivos) em outros projetos,
+            sem expor dados ou conteúdos exclusivos do cliente.
+          </li>
+          <li>
+            Ao encerrar a mensalidade, mediante solicitação, disponibilizamos backup dos arquivos
+            do site em até 10 dias úteis (salvo disposição diversa no contrato).
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-slate-900">7. Suporte</h2>
+        <p>
+          Landing e Institucional: suporte de segunda a sexta-feira. Pacote Completo: suporte de
+          segunda a domingo. Horários e canais seguem o combinado na proposta/contrato.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-slate-900">8. Uso deste site</h2>
+        <p>
+          O conteúdo de {siteConfig.url} é informativo. Não configuramos contrato automático só
+          pela navegação. Pedidos e fechamentos ocorrem por WhatsApp, proposta e, quando
+          aplicável, contrato assinado ou aceito formalmente.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-slate-900">9. Privacidade</h2>
+        <p>
+          O tratamento de dados pessoais segue a{' '}
+          <a href="/privacidade" class="text-brand-600 hover:underline">
+            Política de Privacidade
+          </a>
+          .
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-slate-900">10. Alterações</h2>
+        <p>
+          Estes Termos podem ser atualizados a qualquer momento. A versão vigente é a publicada
+          nesta página, com a data de atualização acima. Alterações relevantes a clientes ativos
+          serão comunicadas conforme o contrato.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-slate-900">11. Foro</h2>
+        <p>
+          Fica eleito o foro da comarca de <strong>{foro}</strong> para dirimir controvérsias
+          relativas a estes Termos e aos serviços da {siteConfig.shortName}, com renúncia a
+          qualquer outro, por mais privilegiado que seja, quando a lei permitir.
+        </p>
+      </section>
+    </div>
+
+    <p class="mt-10 flex flex-wrap gap-x-4 gap-y-2">
+      <a href="/" class="text-brand-600 hover:underline">← Voltar para a página inicial</a>
+      <a href="/privacidade" class="text-brand-600 hover:underline">Política de Privacidade</a>
+    </p>
+  </main>
+</BaseLayout>

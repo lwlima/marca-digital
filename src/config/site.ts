@@ -68,6 +68,8 @@ export const siteConfig = {
   cnpj: '57.374.824/0001-49',
   email: 'contato@marcadigital.dev.br',
   whatsapp: '5519992839122',
+  city: 'Santa Cruz das Palmeiras',
+  state: 'SP',
   heroSubtitle:
     'Sites rápidos e Perfil da Empresa no Google para prestadores de serviço que querem mais contatos — sem enrolação de agência de marketing.',
   ctaNavLabel: 'Quero um site',

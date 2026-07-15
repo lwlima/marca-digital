@@ -32,6 +32,15 @@ export default function Footer() {
           >
             Política de Privacidade
           </a>
+          <span className="text-brand-700" aria-hidden="true">
+            ·
+          </span>
+          <a
+            href="/termos"
+            className="text-slate-200 underline decoration-brand-700 underline-offset-2 transition-colors hover:text-white"
+          >
+            Termos de Uso
+          </a>
         </p>
       </div>
     </footer>
