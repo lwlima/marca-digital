@@ -1,8 +1,13 @@
 export const faqItems = [
   {
-    question: 'O que exatamente está incluso na "Consultoria de Performance"?',
+    question: 'O que a Marca Digital entrega?',
     answer:
-      'Não é apenas um site. Você recebe uma estrutura completa: criação de uma página focada em conversão, configuração de rastreamento para saber de onde vêm seus clientes, deixar sua página o mais rápida possível e ajuste do seu perfil no Google Maps para que você seja encontrado por quem está pronto para comprar de você agora.',
+      'Sites (Landing, Institucional ou Completo), configuração de Analytics, hospedagem gerenciada com franquia de horas e, no Completo, Perfil da Empresa no Google. Sistemas e e-commerce sob orçamento. Não fazemos anúncios pagos, branding/identidade visual, gestão de redes sociais nem manutenção avulsa de site de terceiros.',
+  },
+  {
+    question: 'Para quem é a Marca Digital?',
+    answer:
+      'Para prestadores de serviço que precisam de site rápido, presença local no Google e um canal claro de contato (WhatsApp). No início, o atendimento é sob prospecção e conversa direta.',
   },
   {
     question: 'Por que preciso de uma Landing Page se já tenho rede social?',
@@ -10,23 +15,28 @@ export const faqItems = [
       'O Instagram é ótimo para conteúdo, mas o Google é onde a pessoa já decidiu contratar. Se ela encontra seu site rápido, profissional e com um botão de WhatsApp claro, a chance de fechamento é muito maior do que ficar esperando o algoritmo das redes sociais mostrar o seu post.',
   },
   {
-    question: 'Por que a cobrança é mensal e não um valor único?',
+    question: 'E se eu já tiver um site antigo?',
     answer:
-      'Sua Landing Page é um "vendedor virtual" que nunca dorme, mas ele precisa de manutenção. O valor mensal cobre a hospedagem de altíssima performance, as atualizações de segurança para o site não cair e, principalmente, o monitoramento técnico para garantir que você continue bem posicionado no Google Maps. É um investimento para manter o seu canal de vendas ativo e saudável todos os dias.',
+      'Podemos fazer um diagnóstico gratuito (PageSpeed em PDF, em até 24h) do que você já tem. Se fizer sentido, desenvolvemos um site novo conosco com padrão de performance e mensalidade. Não oferecemos só “manutenção” em site hospedado e mantido por terceiros.',
+  },
+  {
+    question: 'O que é o diagnóstico gratuito?',
+    answer:
+      'É um serviço opcional para quem já tem site: você envia nome e o link pelo WhatsApp; em até 24 horas mando um PDF com apontamentos do PageSpeed. Não inclui correções. O foco do negócio é desenvolver o site e a solução — o diagnóstico só ajuda a decidir o caminho.',
+  },
+  {
+    question: 'Como funciona o pagamento mensal e o anual?',
+    answer:
+      'No mensal você paga o valor cheio e fica conosco enquanto quiser — sem fidelidade —, bastando avisar com 30 dias para cancelar. No anual, há desconto: 15% no PIX à vista ou 5% no cartão em até 12x. Se cancelar o plano anual antes do fim, não há reembolso: o acesso aos serviços continua até completar os 12 meses já pagos. Alterações e gestão do Perfil da Empresa no Google consomem a franquia de horas do pacote; horas não usadas não acumulam; excedente custa R$ 100/h. Condições completas constam na proposta/contrato.',
   },
   {
     question: 'Em quanto tempo os resultados aparecem?',
     answer:
-      'A velocidade de carregamento é otimizada na entrega, o que já traz profissionalismo imediato. Para o posicionamento no Google Maps, que é um trabalho de autoridade local, o Google leva entre 2 a 8 semanas para consolidar sua empresa nos primeiros resultados, dependendo da concorrência no seu bairro ou cidade.',
-  },
-  {
-    question: 'E se eu já tiver um site antigo?',
-    answer:
-      'Geralmente, sites antigos são lentos e não foram feitos para converter em vendas. Eu faço um diagnóstico gratuito do que você já tem. Se for melhor, eu migro para uma nova estrutura de alta performance; se não, reformulamos tudo para garantir que o dinheiro que você investe em marketing não seja desperdiçado por causa de um site lento ou confuso.',
+      'A velocidade de carregamento é otimizada na entrega, o que já transmite profissionalismo. Para o Perfil da Empresa no Google, o posicionamento local costuma levar de 2 a 8 semanas para consolidar, dependendo da concorrência na sua região.',
   },
   {
     question: 'Como eu sei que o trabalho está trazendo resultados?',
     answer:
-      'Você não recebe apenas "promessas". Eu configuro o Google Analytics na sua conta (e o rastreamento de anúncios, se você usar) — você é o dono de todos os dados. Mensalmente, você recebe um relatório simples e direto, mostrando quantas pessoas acessaram sua página e quantas clicaram no seu botão de WhatsApp. Transparência total sobre o seu retorno financeiro.',
+      'Configuro o Google Analytics na sua conta — você é dono dos dados. Mensalmente, um relatório simples mostra acessos e cliques no WhatsApp. Transparência sobre o retorno do canal.',
   },
 ] as const;

@@ -1,0 +1,51 @@
+---
+import { brandAssets } from '../config/site';
+---
+
+<section
+  id="padrao"
+  class="bg-white py-16 sm:py-20"
+  aria-labelledby="padrao-heading"
+>
+  <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+    <div class="text-center">
+      <p class="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-brand-600">
+        Padrão técnico
+      </p>
+      <h2
+        id="padrao-heading"
+        class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl"
+      >
+        É assim que entregamos.
+      </h2>
+      <p class="mx-auto mt-3 max-w-xl text-base leading-relaxed text-slate-600">
+        PageSpeed Insights da nossa própria landing — Mobile. Sites desenvolvidos
+        por nós saem nesse padrão de performance.
+      </p>
+    </div>
+
+    <figure class="mt-10 overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 shadow-sm">
+      <img
+        src={brandAssets.pagespeedProof}
+        alt="PageSpeed Insights Mobile da Marca Digital: Performance 96, Acessibilidade 100, Boas práticas 100 e SEO 100"
+        width="964"
+        height="384"
+        loading="lazy"
+        decoding="async"
+        class="h-auto w-full"
+      />
+      <figcaption class="border-t border-slate-200 px-4 py-3 text-center text-xs text-slate-500 sm:text-sm">
+        Fonte: PageSpeed Insights ·{' '}
+        <a
+          href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fmarcadigital.dev.br%2F"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="font-medium text-brand-700 underline decoration-brand-200 underline-offset-2 hover:decoration-brand-400"
+        >
+          marcadigital.dev.br
+        </a>
+        {' '}· Mobile
+      </figcaption>
+    </figure>
+  </div>
+</section>

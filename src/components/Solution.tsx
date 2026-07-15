@@ -4,21 +4,21 @@ import SectionEyebrow from './SectionEyebrow';
 const pillars = [
   {
     icon: MapPin,
-    title: 'Aparecer no Google Maps',
+    title: 'Perfil da Empresa no Google',
     description:
-      'Ajuste da sua ficha no Google para quem buscar pelo seu serviço na região te encontrar antes do concorrente.',
+      'Criação e ajuste do seu Perfil da Empresa no Google para quem busca o seu serviço na região te encontrar antes do concorrente.',
   },
   {
     icon: Gauge,
     title: 'Site rápido no celular',
     description:
-      'Páginas leves e seguras em qualquer aparelho. Nada de site pesado que faz o cliente desistir antes de falar com você.',
+      'Páginas leves e seguras em qualquer aparelho, entregues no padrão PageSpeed. Nada de site pesado que faz o cliente desistir.',
   },
   {
     icon: Wrench,
-    title: 'Manutenção sem dor de cabeça',
+    title: 'Manutenção + hospedagem',
     description:
-      'Eu cuido de atualizações e segurança. Você só precisa atender os clientes que chegarem.',
+      'Pacotes com franquia de horas, domínio, e-mail, SSL, backup e CDN quando aplicável. Você foca em atender.',
   },
 ] as const;
 

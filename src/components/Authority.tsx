@@ -12,7 +12,7 @@ const highlights = [
     icon: Zap,
     title: 'Site que não perde cliente',
     description:
-      'Páginas rápidas no celular, ficha no Maps ajustada e caminho claro para o cliente falar com você.',
+      'Páginas rápidas no celular, Perfil da Empresa no Google ajustado e caminho claro para o cliente falar com você.',
   },
   {
     icon: MessageCircle,
@@ -39,9 +39,10 @@ export default function Authority() {
             Eu cuido da parte técnica para você vender mais.
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">
-            Diferente de agências de posts e métricas de vaidade, eu resolvo o
-            que trava seu negócio online: site lento, invisível no Google ou
-            difícil de contatar. Você foca em atender; eu cuido do resto.
+            Feito para prestadores de serviço — não para agência de anúncios ou
+            posts. Resolvo o que trava o negócio online: site lento, invisível
+            no Google ou difícil de contatar. Você foca em atender; eu cuido do
+            resto.
           </p>
         </div>
 

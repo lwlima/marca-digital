@@ -15,21 +15,44 @@ export const brandAssets = {
   favicon192: '/favicon-192.png',
   faviconApple: '/apple-touch-icon.png',
   hero: '/hero.webp',
+  pagespeedProof: '/pagespeed-padrao.webp',
 } as const;
 
+/** Contato comercial (foco: vender site / solução). */
+const msgProjeto = `Olá! Vim pelo site da Marca Digital e gostaria de falar sobre um site / projeto.
+
+Meu nome:`;
+
+/** Diagnóstico: secundário — quem já tem site. */
+const msgDiagnostico = `Olá! Já tenho um site e gostaria de um diagnóstico gratuito (PageSpeed).
+
+Meu nome:
+Link do site:
+
+(Para a análise PageSpeed, o link do site já é suficiente.)`;
+
+function msgPlano(planLabel: string) {
+  return `Olá! Vi o plano ${planLabel} no site e gostaria de saber mais.
+
+Meu nome:`;
+}
+
+/** Sistemas / E-commerce: sem pré-requisito — discovery na conversa. */
+const msgOrcamentoSistemas = `Olá! Gostaria de pedir orçamento para Sistema / E-commerce.
+
+Meu nome:`;
+
 export const whatsappMessages: Record<WhatsAppButtonLocation, string> = {
-  navbar:
-    'Olá! Gostaria de solicitar um diagnóstico gratuito do meu site e presença no Google.',
-  hero:
-    'Olá! Gostaria de solicitar um diagnóstico gratuito do meu site e presença no Google.',
-  problem:
-    'Olá! Quero entender o que está travando meu site e solicitar um diagnóstico gratuito.',
-  mid_cta:
-    'Olá! Vi como funciona o processo e gostaria de solicitar um diagnóstico gratuito.',
-  final_cta:
-    'Olá! Ainda tenho dúvidas e gostaria de solicitar um diagnóstico gratuito.',
-  floating:
-    'Olá! Vim pelo site da Marca Digital e gostaria de falar sobre um diagnóstico gratuito.',
+  navbar: msgProjeto,
+  hero: msgProjeto,
+  mid_cta: msgProjeto,
+  final_cta: msgProjeto,
+  floating: msgProjeto,
+  problem: msgDiagnostico,
+  plan_landing: msgPlano('Landing'),
+  plan_institucional: msgPlano('Institucional'),
+  plan_completo: msgPlano('Completo'),
+  quote_systems: msgOrcamentoSistemas,
 };
 
 export const siteConfig = {
@@ -37,27 +60,28 @@ export const siteConfig = {
   shortName: 'Marca Digital',
   tagline: 'Consultoria de Performance',
   owner: 'Luciano Wilian de Lima',
-  title: 'Marca Digital | Consultoria de Performance — Sites e Google Maps',
+  title:
+    'Marca Digital | Consultoria de Performance — Sites e Perfil da Empresa no Google',
   description:
-    'Consultoria de performance digital para empresas locais: sites ultra-rápidos, otimização no Google Maps e infraestrutura gerenciada.',
+    'Consultoria de performance digital para prestadores de serviço: sites ultra-rápidos, Perfil da Empresa no Google e infraestrutura gerenciada.',
   url: siteUrl,
   cnpj: '57.374.824/0001-49',
   email: 'contato@marcadigital.dev.br',
   whatsapp: '5519992839122',
   heroSubtitle:
-    'Sites rápidos e presença no Google para empresas que querem mais contatos — sem enrolação de agência de marketing.',
-  ctaNavLabel: 'Diagnóstico grátis',
-  ctaHeroLabel: 'Quero um diagnóstico gratuito',
-  ctaHeroMicrocopy: 'Sem compromisso · Diagnóstico em poucos minutos',
-  ctaProblemLabel: 'Quero saber o que está travando meu site',
-  ctaMidLabel: 'Quero um diagnóstico gratuito',
+    'Sites rápidos e Perfil da Empresa no Google para prestadores de serviço que querem mais contatos — sem enrolação de agência de marketing.',
+  ctaNavLabel: 'Quero um site',
+  ctaHeroLabel: 'Quero um site rápido',
+  ctaHeroMicrocopy: 'Landing, Institucional ou Completo · proposta no WhatsApp',
+  ctaProblemLabel: 'Já tenho site — quero um diagnóstico',
+  ctaMidLabel: 'Falar sobre meu projeto',
   ctaMidTitle: 'Pronto para receber mais contatos?',
   ctaMidDescription:
-    'Em poucos minutos avalio seu site e sua presença no Google.',
-  ctaFinalLabel: 'Quero um diagnóstico gratuito',
-  ctaFinalTitle: 'Ainda com dúvidas?',
+    'Sites feitos para converter no celular, com hospedagem e manutenção inclusos. Fale no WhatsApp e montamos a proposta.',
+  ctaFinalLabel: 'Falar no WhatsApp',
+  ctaFinalTitle: 'Vamos tirar seu projeto do papel?',
   ctaFinalDescription:
-    'Solicite um diagnóstico gratuito e veja o que está travando seus contatos online.',
+    'Escolha um plano ou conte o que você precisa — respondo no WhatsApp e avançamos juntos.',
   ogImage: brandAssets.ogImage,
   assets: brandAssets,
   ogImageWidth: 1200,

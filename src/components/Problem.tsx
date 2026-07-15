@@ -39,7 +39,7 @@ export default function Problem() {
 
               <div className="flex items-center gap-3 text-sm text-slate-500">
                 <MapPinOff className="h-5 w-5 shrink-0 text-red-700" />
-                <span>Não encontrado no Google Maps</span>
+                <span>Sem Perfil da Empresa no Google</span>
               </div>
             </div>
 
@@ -62,7 +62,7 @@ export default function Problem() {
             O seu site atual está te custando dinheiro?
           </h2>
           <p className="mt-5 text-base leading-relaxed text-slate-600 sm:text-lg">
-            Um site lento, difícil de navegar ou que não aparece no Google Maps
+            Um site lento, difícil de navegar ou sem Perfil da Empresa no Google
             não é apenas um &ldquo;detalhe&rdquo;. É a porta de entrada para seu
             cliente ir direto para o concorrente. Se o seu site não carrega em
             menos de 3 segundos ou não facilita o contato via WhatsApp, você
