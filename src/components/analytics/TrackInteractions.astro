@@ -6,7 +6,11 @@ const measurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
   measurementId && (
     <script is:inline>
       (function () {
-        if (typeof window.gtag !== 'function') return;
+        // Listeners always register. gtag only exists after cookie consent,
+        // so we check at event time — never bail out on first paint.
+        function canTrack() {
+          return typeof window.gtag === 'function';
+        }
 
         const scrollMarks = new Set();
 
@@ -20,6 +24,8 @@ const measurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
         };
 
         function trackScrollDepth() {
+          if (!canTrack()) return;
+
           const scrollable =
             document.documentElement.scrollHeight - window.innerHeight;
           if (scrollable <= 0) return;
@@ -41,6 +47,8 @@ const measurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
         document.addEventListener(
           'click',
           function (event) {
+            if (!canTrack()) return;
+
             const target = event.target;
             if (!(target instanceof Element)) return;
 
