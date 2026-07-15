@@ -19,8 +19,11 @@ export function loadGoogleAnalytics(measurementId: string) {
   window.__marcaDigitalAnalyticsLoaded = true;
   window.dataLayer = window.dataLayer || [];
 
-  window.gtag = function gtag(...args: unknown[]) {
-    window.dataLayer?.push(args);
+  // Official gtag stub: must push `arguments` (Arguments object), not a rest Array.
+  // Pushing [...args] leaves commands unprocessed and hits never leave the browser.
+  window.gtag = function gtag() {
+    // eslint-disable-next-line prefer-rest-params
+    window.dataLayer!.push(arguments);
   };
 
   const script = document.createElement('script');
@@ -31,10 +34,7 @@ export function loadGoogleAnalytics(measurementId: string) {
   window.gtag('js', new Date());
   window.gtag('config', measurementId, {
     send_page_view: true,
-    allow_google_signals: true,
-    allow_ad_personalization_signals: true,
     anonymize_ip: true,
-    cookie_flags: 'SameSite=None;Secure',
   });
 
   const params = new URLSearchParams(window.location.search);
