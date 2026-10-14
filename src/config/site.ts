@@ -89,7 +89,7 @@ export const siteConfig = {
   ogImageWidth: 1200,
   ogImageHeight: 630,
   ogImageAlt:
-    'Transforme seu site em uma máquina de novos clientes — Marca Digital | Consultoria de Performance',
+    'Transforme seu site em uma máquina de novos clientes — Marca Digital',
 } as const;
 
 export const problemStats = {

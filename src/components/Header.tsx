@@ -19,7 +19,7 @@ export default function Header() {
         <a
           href="#inicio"
           className="flex min-w-0 items-center"
-          aria-label={`${siteConfig.name} — início`}
+          aria-label="Marca Digital — voltar ao início"
         >
           <img
             src={siteConfig.assets.logoFullNavbar}
