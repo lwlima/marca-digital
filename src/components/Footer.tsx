@@ -45,6 +45,16 @@ export default function Footer() {
           <span className="text-brand-700" aria-hidden="true">
             ·
           </span>
+          <button
+            type="button"
+            data-cookie-manage
+            className="text-slate-200 underline decoration-brand-700 underline-offset-2 transition-colors hover:text-white"
+          >
+            Gerenciar cookies
+          </button>
+          <span className="text-brand-700" aria-hidden="true">
+            ·
+          </span>
           <a
             href="/termos"
             className="text-slate-200 underline decoration-brand-700 underline-offset-2 transition-colors hover:text-white"

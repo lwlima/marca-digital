@@ -10,6 +10,7 @@ const { measurementId } = Astro.props;
   id="cookie-consent"
   hidden
   role="dialog"
+  aria-label="Cookies e privacidade"
   aria-labelledby="cookie-consent-title"
   aria-describedby="cookie-consent-description"
   data-measurement-id={measurementId ?? ''}
@@ -54,6 +55,7 @@ const { measurementId } = Astro.props;
 
 <script>
   import {
+    denyAnalyticsStorage,
     getCookieConsent,
     loadGoogleAnalytics,
     setCookieConsent,
@@ -94,6 +96,14 @@ const { measurementId } = Astro.props;
     if (action === 'reject') {
       setCookieConsent('rejected');
       hideBanner();
+      denyAnalyticsStorage();
     }
+  });
+
+  document.addEventListener('click', (event) => {
+    const target = event.target;
+    if (!(target instanceof Element)) return;
+    if (!target.closest('[data-cookie-manage]')) return;
+    showBanner();
   });
 </script>
