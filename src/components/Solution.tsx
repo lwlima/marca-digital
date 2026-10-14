@@ -12,7 +12,7 @@ const pillars = [
     icon: Gauge,
     title: 'Site rápido no celular',
     description:
-      'Páginas leves e seguras em qualquer aparelho, entregues no padrão PageSpeed. Nada de site pesado que faz o cliente desistir.',
+      'Páginas leves e seguras em qualquer aparelho, com meta de nota 90+ no PageSpeed mobile. Nada de site pesado que faz o cliente desistir.',
   },
   {
     icon: Wrench,

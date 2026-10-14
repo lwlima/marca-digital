@@ -15,11 +15,12 @@ export const pricingPlans = [
     whatsapp: 'plan_landing' as const satisfies WhatsAppButtonLocation,
     features: [
       '1 página focada em conversão',
-      'Padrão PageSpeed na entrega',
+      'Meta: nota 90+ no PageSpeed mobile na entrega*',
       'Configuração de Analytics',
       '2h/mês de alterações',
       'Domínio, e-mail, SSL e backup',
       'Suporte de segunda a sexta',
+      // CONFIRMAR antes de publicar: "Suporte de segunda a sexta, em horário comercial"
     ],
   },
   {
@@ -33,11 +34,12 @@ export const pricingPlans = [
     whatsapp: 'plan_institucional' as const satisfies WhatsAppButtonLocation,
     features: [
       'Até 5 páginas',
-      'Padrão PageSpeed na entrega',
+      'Meta: nota 90+ no PageSpeed mobile na entrega*',
       'Configuração de Analytics',
       '3h/mês de alterações',
       'Domínio, e-mail, SSL e backup',
       'Suporte de segunda a sexta',
+      // CONFIRMAR antes de publicar: "Suporte de segunda a sexta, em horário comercial"
     ],
   },
   {
@@ -52,6 +54,7 @@ export const pricingPlans = [
     whatsapp: 'plan_completo' as const satisfies WhatsAppButtonLocation,
     features: [
       'Landing ou Institucional — você escolhe',
+      'Meta: nota 90+ no PageSpeed mobile na entrega*',
       'Configuração do Perfil da Empresa no Google',
       'Configuração de Analytics',
       '5h/mês de alterações',
