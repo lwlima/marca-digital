@@ -6,7 +6,7 @@ const pillars = [
     icon: MapPin,
     title: 'Perfil da Empresa no Google',
     description:
-      'Criação e ajuste do seu Perfil da Empresa no Google para quem busca o seu serviço na região te encontrar antes do concorrente.',
+      'Criação e ajuste do seu Perfil da Empresa no Google, para que quem busca o seu serviço na região encontre você antes do concorrente.',
   },
   {
     icon: Gauge,
@@ -18,7 +18,7 @@ const pillars = [
     icon: Wrench,
     title: 'Manutenção + hospedagem',
     description:
-      'Pacotes com franquia de horas, domínio, e-mail, SSL, backup e CDN quando aplicável. Você foca em atender.',
+      'Pacotes com franquia de horas para alterações, mais domínio, e-mail, SSL, backup e CDN (quando aplicável). Você foca em atender.',
   },
 ] as const;
 

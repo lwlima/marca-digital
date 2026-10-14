@@ -7,14 +7,14 @@ const steps = [
     icon: MessageCircle,
     title: 'Conversa no WhatsApp',
     description:
-      'Você conta o que precisa. Se já tiver site, podemos fazer um diagnóstico gratuito em PDF — o objetivo é indicar o plano certo.',
+      'Você conta o que precisa. Se já tiver site, posso fazer um diagnóstico gratuito em PDF — o objetivo é indicar o plano certo.',
   },
   {
     number: 2,
     icon: Code2,
     title: 'Proposta e execução',
     description:
-      'Fechamos Landing, Institucional ou Completo (ou sistema sob orçamento) e desenvolvemos o projeto conosco.',
+      'Você escolhe o plano (Landing, Institucional ou Completo; sistemas sob orçamento) e eu desenvolvo o projeto.',
   },
   {
     number: 3,
@@ -39,7 +39,7 @@ export default function HowItWorks() {
             id="how-heading"
             className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl"
           >
-            Como Funciona
+            Como funciona
           </h2>
         </div>
 

@@ -63,8 +63,8 @@ export default function Problem() {
           </h2>
           <p className="mt-5 text-base leading-relaxed text-slate-600 sm:text-lg">
             Um site lento, difícil de navegar ou sem Perfil da Empresa no Google
-            não é apenas um &ldquo;detalhe&rdquo;. É a porta de entrada para seu
-            cliente ir direto para o concorrente. Se o seu site não carrega em
+            não é apenas um &ldquo;detalhe&rdquo;. É o caminho mais curto para o
+            seu cliente chegar ao concorrente. Se o seu site não carrega em
             menos de 3 segundos ou não facilita o contato via WhatsApp, você
             está perdendo vendas todos os dias.
           </p>

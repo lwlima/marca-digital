@@ -4,21 +4,21 @@ import SectionEyebrow from './SectionEyebrow';
 const highlights = [
   {
     icon: Target,
-    title: 'Resultado antes de técnico',
+    title: 'Resultado antes da técnica',
     description:
       'Você não precisa entender de site, Google ou ferramentas. Precisa de mais contatos chegando pelo Google e WhatsApp.',
   },
   {
     icon: Zap,
-    title: 'Site que não perde cliente',
+    title: 'Site que não deixa cliente escapar',
     description:
       'Páginas rápidas no celular, Perfil da Empresa no Google ajustado e caminho claro para o cliente falar com você.',
   },
   {
     icon: MessageCircle,
-    title: '5 anos resolvendo problemas reais',
+    title: '5 anos de experiência na web',
     description:
-      'Há 5 anos ajudo empresas a resolver problemas reais na web. Hoje uso essa experiência para quem quer vender mais, não para impressionar com termos complicados.',
+      'Há 5 anos ajudo empresas a resolver problemas na web. Hoje uso essa experiência para quem quer vender mais, sem termos complicados.',
   },
 ] as const;
 
@@ -39,10 +39,9 @@ export default function Authority() {
             Eu cuido da parte técnica para você vender mais.
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">
-            Feito para prestadores de serviço — não para agência de anúncios ou
-            posts. Resolvo o que trava o negócio online: site lento, invisível
-            no Google ou difícil de contatar. Você foca em atender; eu cuido do
-            resto.
+            Não sou agência de anúncios nem de posts. Resolvo o que trava o seu
+            negócio online: site lento, invisível no Google ou difícil de
+            contatar. Você foca em atender; eu cuido do resto.
           </p>
         </div>
 

@@ -63,7 +63,7 @@ export const siteConfig = {
   title:
     'Marca Digital | Consultoria de Performance — Sites e Perfil da Empresa no Google',
   description:
-    'Consultoria de performance digital para prestadores de serviço: sites ultra-rápidos, Perfil da Empresa no Google e infraestrutura gerenciada.',
+    'Consultoria de performance digital para pequenos negócios: sites ultrarrápidos, Perfil da Empresa no Google e infraestrutura gerenciada.',
   url: siteUrl,
   cnpj: '57.374.824/0001-49',
   email: 'contato@marcadigital.dev.br',
@@ -71,7 +71,7 @@ export const siteConfig = {
   city: 'Santa Cruz das Palmeiras',
   state: 'SP',
   heroSubtitle:
-    'Sites rápidos e Perfil da Empresa no Google para prestadores de serviço que querem mais contatos — sem enrolação de agência de marketing.',
+    'Sites rápidos e Perfil da Empresa no Google para pequenos negócios que querem mais contatos — sem enrolação de agência de marketing.',
   ctaNavLabel: 'Quero um site',
   ctaHeroLabel: 'Quero um site rápido',
   ctaHeroMicrocopy: 'Landing, Institucional ou Completo · proposta no WhatsApp',
@@ -79,7 +79,7 @@ export const siteConfig = {
   ctaMidLabel: 'Falar sobre meu projeto',
   ctaMidTitle: 'Pronto para receber mais contatos?',
   ctaMidDescription:
-    'Sites feitos para converter no celular, com hospedagem e manutenção inclusos. Fale no WhatsApp e montamos a proposta.',
+    'Sites feitos para converter no celular, com hospedagem e manutenção inclusos. Fale no WhatsApp e monto a proposta.',
   ctaFinalLabel: 'Falar no WhatsApp',
   ctaFinalTitle: 'Vamos tirar seu projeto do papel?',
   ctaFinalDescription:
