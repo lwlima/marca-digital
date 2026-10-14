@@ -10,8 +10,7 @@ const { measurementId } = Astro.props;
   id="cookie-consent"
   hidden
   role="dialog"
-  aria-label="Cookies e privacidade"
-  aria-labelledby="cookie-consent-title"
+  aria-label="Aviso de cookies"
   aria-describedby="cookie-consent-description"
   data-measurement-id={measurementId ?? ''}
   class="fixed inset-x-0 bottom-0 z-[60] border-t border-brand-800 bg-brand-950 p-4 shadow-2xl sm:p-6"
@@ -24,11 +23,11 @@ const { measurementId } = Astro.props;
         Cookies e privacidade
       </p>
       <p id="cookie-consent-description" class="mt-1">
-        Uso cookies analíticos para entender como você usa o site e melhorar
-        o atendimento. Você pode aceitar ou recusar o rastreamento.{" "}
+        Uso cookies analíticos (Google Analytics) para entender como o site é usado
+        e melhorá-lo. Você pode aceitar ou recusar. Saiba mais na{" "}
         <a
           href="/privacidade"
-          class="text-brand-300 underline hover:text-brand-200"
+          class="text-brand-300 underline hover:text-brand-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
         >
           Política de Privacidade
         </a>
@@ -38,14 +37,14 @@ const { measurementId } = Astro.props;
       <button
         type="button"
         data-cookie-action="reject"
-        class="rounded-lg border border-brand-700 px-4 py-2.5 text-sm font-semibold text-slate-200 transition-colors hover:bg-brand-900"
+        class="rounded-lg bg-brand-600 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
       >
         Recusar
       </button>
       <button
         type="button"
         data-cookie-action="accept"
-        class="rounded-lg bg-brand-600 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-700"
+        class="rounded-lg bg-brand-600 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
       >
         Aceitar cookies
       </button>
