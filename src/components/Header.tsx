@@ -48,7 +48,7 @@ export default function Header() {
               id="menu-button"
               aria-expanded="false"
               aria-controls="menu-mobile"
-              className="rounded-lg border border-slate-200 px-2.5 py-1.5 text-xs font-semibold text-slate-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600"
+              className="inline-flex min-h-11 items-center rounded-lg border border-slate-200 px-2.5 py-1.5 text-xs font-semibold text-slate-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600"
             >
               Menu
             </button>
@@ -72,7 +72,7 @@ export default function Header() {
             target="_blank"
             rel="noopener noreferrer"
             {...whatsappButtonProps('navbar')}
-            className="inline-flex shrink-0 items-center justify-center gap-1.5 rounded-lg bg-brand-600 px-2.5 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-brand-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600 sm:gap-2 sm:px-4 sm:py-2.5 sm:text-base"
+            className="inline-flex min-h-11 shrink-0 items-center justify-center gap-1.5 rounded-lg bg-brand-600 px-2.5 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-brand-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600 sm:gap-2 sm:px-4 sm:py-2.5 sm:text-base lg:min-h-0"
           >
             <WhatsAppIcon className="h-3.5 w-3.5 sm:h-5 sm:w-5" />
             {siteConfig.ctaNavLabel}
