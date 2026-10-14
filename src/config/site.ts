@@ -56,10 +56,9 @@ export const whatsappMessages: Record<WhatsAppButtonLocation, string> = {
 };
 
 export const siteConfig = {
-  name: 'Marca Digital | Consultoria de Performance',
+  name: 'Marca Digital',
   shortName: 'Marca Digital',
-  tagline: 'Consultoria de Performance',
-  owner: 'Luciano Wilian de Lima',
+  legalName: 'Lima Code Ltda',
   title: 'Marca Digital | Sites rápidos e Perfil da Empresa no Google',
   description:
     'Sites ultrarrápidos, Perfil da Empresa no Google, hospedagem e manutenção para pequenos negócios que querem mais contatos pelo WhatsApp.',
