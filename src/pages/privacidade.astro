@@ -60,12 +60,19 @@ import { siteConfig } from '../config/site';
         <h2 class="text-xl font-semibold text-slate-900">4. Cookies e ferramentas de terceiros</h2>
         <p>
           Se você aceitar cookies analíticos, utilizamos o <strong>Google Analytics 4</strong> para
-          estatísticas de uso. O Google pode processar dados conforme sua própria política.
-          Você pode recusar cookies no banner exibido no site.
+          estatísticas de uso. São registrados eventos de uso como cliques nos botões de WhatsApp,
+          profundidade de rolagem e abertura das perguntas do FAQ. O Google pode processar dados
+          conforme sua própria política. Você pode recusar cookies no banner exibido no site.
         </p>
         <p class="mt-3">
           O Google Analytics pode processar dados em servidores fora do Brasil, nos termos da política do Google.
         </p>
+        <!--
+          CONFIRMAR Cloudflare Web Analytics antes de publicar. O beacon não está no código:
+          a Cloudflare injeta static.cloudflareinsights.com/beacon.min.js pelo painel.
+          A) Manter o beacon e acrescentar: "Infraestrutura e métricas sem cookies: o site usa a Cloudflare (CDN, segurança e Web Analytics sem cookies), que pode processar dados técnicos como IP, navegador e página acessada."
+          B) Desativar o Web Analytics no painel da Cloudflare e não mencionar nesta Política.
+        -->
       </section>
 
       <section>
