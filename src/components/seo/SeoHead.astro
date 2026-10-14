@@ -1,5 +1,6 @@
 ---
 import { siteConfig, absoluteUrl, brandAssets } from '../../config/site';
+import { faqItems } from '../../data/faq';
 
 interface Props {
   title?: string;
@@ -20,20 +21,18 @@ const {
 const canonical = absoluteUrl(path);
 const imageUrl = ogImage.startsWith('http') ? ogImage : absoluteUrl(ogImage);
 
-const jsonLd = {
+const isHome = path === '/' || path === '';
+
+const professionalService = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
-  name: siteConfig.name,
+  name: siteConfig.shortName,
   description: siteConfig.description,
   url: siteConfig.url,
   image: absoluteUrl(brandAssets.logoFullWithBg),
   logo: absoluteUrl(brandAssets.logoFull),
   telephone: `+${siteConfig.whatsapp}`,
   email: siteConfig.email,
-  address: {
-    '@type': 'PostalAddress',
-    addressCountry: 'BR',
-  },
   founder: {
     '@type': 'Person',
     name: siteConfig.owner,
@@ -47,6 +46,19 @@ const jsonLd = {
     'Hospedagem Gerenciada',
   ],
 };
+
+const faqPage = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+};
 ---
 
 <meta name="description" content={description} />
@@ -55,7 +67,7 @@ const jsonLd = {
 
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="pt_BR" />
-<meta property="og:site_name" content={siteConfig.name} />
+<meta property="og:site_name" content={siteConfig.shortName} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:url" content={canonical} />
@@ -70,4 +82,5 @@ const jsonLd = {
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={imageUrl} />
 
-<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+{isHome && <script type="application/ld+json" set:html={JSON.stringify(professionalService)} />}
+{isHome && <script type="application/ld+json" set:html={JSON.stringify(faqPage)} />}

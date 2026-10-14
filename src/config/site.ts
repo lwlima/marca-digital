@@ -60,10 +60,9 @@ export const siteConfig = {
   shortName: 'Marca Digital',
   tagline: 'Consultoria de Performance',
   owner: 'Luciano Wilian de Lima',
-  title:
-    'Marca Digital | Consultoria de Performance — Sites e Perfil da Empresa no Google',
+  title: 'Marca Digital | Sites rápidos e Perfil da Empresa no Google',
   description:
-    'Consultoria de performance digital para pequenos negócios: sites ultrarrápidos, Perfil da Empresa no Google e infraestrutura gerenciada.',
+    'Sites ultrarrápidos, Perfil da Empresa no Google, hospedagem e manutenção para pequenos negócios que querem mais contatos pelo WhatsApp.',
   url: siteUrl,
   cnpj: '57.374.824/0001-49',
   email: 'contato@marcadigital.dev.br',
