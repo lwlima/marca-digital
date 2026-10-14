@@ -1,3 +1,9 @@
+/**
+ * AGUARDAR DADOS — não publicar até informar os prazos em dias úteis:
+ * "Em quanto tempo meu site fica pronto?"
+ * "O prazo depende do plano e do envio dos seus materiais (textos, logo, acessos). Em geral: Landing em [X] dias úteis, Institucional em [Y] e Completo em [Z]. O prazo exato vai na proposta."
+ */
+
 export const faqItems = [
   {
     question: 'O que a Marca Digital entrega?',
@@ -43,6 +49,11 @@ export const faqItems = [
     question: 'O site e o domínio ficam no meu nome?',
     answer:
       'O domínio fica sempre no seu nome. Com o valor da criação do site quitado, o site entregue é seu. Se você encerrar a mensalidade, entrego o backup dos arquivos em até 10 dias úteis, conforme o contrato.',
+  },
+  {
+    question: 'Como pago a criação do site?',
+    answer:
+      'Metade do valor da criação é paga antecipadamente e a outra metade após a finalização do serviço. As condições finais constam na proposta.',
   },
   {
     question: 'Em quanto tempo os resultados aparecem?',
