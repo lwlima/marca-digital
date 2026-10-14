@@ -10,7 +10,7 @@ const { measurementId } = Astro.props;
   id="cookie-consent"
   hidden
   role="dialog"
-  aria-label="Aviso de cookies"
+  aria-labelledby="cookie-consent-title"
   aria-describedby="cookie-consent-description"
   data-measurement-id={measurementId ?? ''}
   class="fixed inset-x-0 bottom-0 z-[60] border-t border-brand-800 bg-brand-950 p-4 shadow-2xl sm:p-6"
@@ -86,14 +86,20 @@ const { measurementId } = Astro.props;
 
     const action = button.dataset.cookieAction;
     if (action === 'accept') {
-      setCookieConsent('accepted');
+      if (!setCookieConsent('accepted')) {
+        showBanner();
+        return;
+      }
       hideBanner();
       if (measurementId) loadGoogleAnalytics(measurementId);
       return;
     }
 
     if (action === 'reject') {
-      setCookieConsent('rejected');
+      if (!setCookieConsent('rejected')) {
+        showBanner();
+        return;
+      }
       hideBanner();
       denyAnalyticsStorage();
     }

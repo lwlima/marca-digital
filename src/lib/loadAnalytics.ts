@@ -14,12 +14,21 @@ const consentDenied = {
 
 export function getCookieConsent(): CookieConsentValue | null {
   if (typeof window === 'undefined') return null;
-  const value = localStorage.getItem(CONSENT_KEY);
-  return value === 'accepted' || value === 'rejected' ? value : null;
+  try {
+    const value = localStorage.getItem(CONSENT_KEY);
+    return value === 'accepted' || value === 'rejected' ? value : null;
+  } catch {
+    return null;
+  }
 }
 
-export function setCookieConsent(value: CookieConsentValue) {
-  localStorage.setItem(CONSENT_KEY, value);
+export function setCookieConsent(value: CookieConsentValue): boolean {
+  try {
+    localStorage.setItem(CONSENT_KEY, value);
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 function ensureGtag() {
@@ -51,7 +60,6 @@ function injectGoogleAnalytics(measurementId: string) {
   window.gtag?.('js', new Date());
   window.gtag?.('config', measurementId, {
     send_page_view: true,
-    anonymize_ip: true,
   });
 
   const params = new URLSearchParams(window.location.search);
