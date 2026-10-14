@@ -20,6 +20,7 @@ export const pricingPlans = [
       '2h/mês de alterações',
       'Domínio, e-mail, SSL e backup',
       'Suporte de segunda a sexta, em horário comercial',
+      // CONFIRMAR horário antes de publicar: "Suporte de segunda a sexta, das [HH]h às [HH]h (horário de Brasília)"
     ],
   },
   {
@@ -38,6 +39,7 @@ export const pricingPlans = [
       '3h/mês de alterações',
       'Domínio, e-mail, SSL e backup',
       'Suporte de segunda a sexta, em horário comercial',
+      // CONFIRMAR horário antes de publicar: "Suporte de segunda a sexta, das [HH]h às [HH]h (horário de Brasília)"
     ],
   },
   {
@@ -58,6 +60,7 @@ export const pricingPlans = [
       '5h/mês de alterações',
       'Domínio, e-mail, SSL e backup',
       'Suporte de segunda a domingo',
+      // CONFIRMAR horário antes de publicar: "Suporte de segunda a domingo, das [HH]h às [HH]h (horário de Brasília)"
     ],
   },
 ] as const;
