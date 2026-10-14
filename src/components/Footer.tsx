@@ -6,7 +6,8 @@ export default function Footer() {
   return (
     <footer className="border-t border-brand-800 bg-brand-950 py-6 text-center text-xs text-slate-300 sm:py-8 sm:text-sm">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <p className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
+        <p>Atendimento 100% online · todo o Brasil</p>
+        <p className="mt-2 flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
           <span>
             © {year} {siteConfig.shortName}
           </span>
@@ -22,6 +23,15 @@ export default function Footer() {
             className="text-slate-200 underline decoration-brand-700 underline-offset-2 transition-colors hover:text-white"
           >
             {siteConfig.email}
+          </a>
+          <span className="text-brand-700" aria-hidden="true">
+            ·
+          </span>
+          <a
+            href={`https://wa.me/${siteConfig.whatsapp}`}
+            className="text-slate-200 underline decoration-brand-700 underline-offset-2 transition-colors hover:text-white"
+          >
+            {siteConfig.phoneDisplay}
           </a>
           <span className="text-brand-700" aria-hidden="true">
             ·

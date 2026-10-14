@@ -44,11 +44,18 @@ export default function Problem() {
             </div>
 
             <p className="mt-4 text-center text-sm font-semibold text-red-700">
-              {problemStats.mobileAbandonmentPercent}%{' '}
-              {problemStats.mobileAbandonmentContext}
+              {problemStats.finding}
             </p>
             <p className="mt-2 text-center text-xs text-slate-500">
-              {problemStats.source}
+              Fonte:{' '}
+              <a
+                href={problemStats.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline decoration-slate-300 underline-offset-2 hover:text-slate-700"
+              >
+                {problemStats.sourceLabel}
+              </a>
             </p>
           </div>
         </div>

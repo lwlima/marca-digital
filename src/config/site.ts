@@ -67,6 +67,7 @@ export const siteConfig = {
   url: siteUrl,
   cnpj: '57.374.824/0001-49',
   email: 'contato@marcadigital.dev.br',
+  phoneDisplay: '(19) 99283-9122',
   whatsapp: '5519992839122',
   city: 'Santa Cruz das Palmeiras',
   state: 'SP',
@@ -94,10 +95,10 @@ export const siteConfig = {
 
 export const problemStats = {
   slowLoadSeconds: '3',
-  mobileAbandonmentPercent: '53',
-  mobileAbandonmentContext:
-    'desistem se o site demora mais de 3 segundos para carregar no celular',
-  source: 'Fonte: Think with Google, dados de Google Analytics (mar. 2016)',
+  finding:
+    'Estudo do Google com a Deloitte: melhorar o carregamento mobile em apenas 0,1 segundo foi associado a +8,4% de conversão em sites de varejo.',
+  sourceLabel: 'Google/Deloitte, Milliseconds Make Millions',
+  sourceUrl: 'https://web.dev/case-studies/milliseconds-make-millions',
 } as const;
 
 export function whatsappUrl(location: WhatsAppButtonLocation) {

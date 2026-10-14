@@ -15,6 +15,9 @@ export default function HeroContent() {
         <p className="mt-5 text-sm leading-relaxed text-slate-200 sm:text-base lg:text-lg">
           {siteConfig.heroSubtitle}
         </p>
+        <p className="mt-2 text-xs leading-relaxed text-slate-300 sm:text-sm">
+          Ainda não tem site? Eu crio. Já tem? Faço um diagnóstico gratuito.
+        </p>
         <div className="mt-4 lg:mt-8">
           <a
             href={whatsappUrl('hero')}

@@ -43,5 +43,15 @@ const {
     <slot />
     <TrackInteractions />
     <CookieConsent measurementId={measurementId} />
+    <script>
+      document.addEventListener('click', (event) => {
+        const target = event.target;
+        if (!(target instanceof Element)) return;
+        const link = target.closest('header details a[href^="#"]');
+        if (!link) return;
+        const details = link.closest('details');
+        if (details instanceof HTMLDetailsElement) details.open = false;
+      });
+    </script>
   </body>
 </html>

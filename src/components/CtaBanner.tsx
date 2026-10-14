@@ -75,6 +75,27 @@ export default function CtaBanner({ variant = 'mid' }: Props) {
           <WhatsAppIcon className="h-5 w-5" />
           {config.label}
         </a>
+        {variant === 'final' && (
+          <p
+            className={`mt-4 text-sm leading-relaxed ${
+              isDark ? 'text-slate-300' : 'text-slate-600'
+            }`}
+          >
+            <a
+              href={`mailto:${siteConfig.email}`}
+              className="underline decoration-slate-300 underline-offset-2 hover:text-brand-700"
+            >
+              {siteConfig.email}
+            </a>
+            <span aria-hidden="true"> · </span>
+            <a
+              href={`https://wa.me/${siteConfig.whatsapp}`}
+              className="underline decoration-slate-300 underline-offset-2 hover:text-brand-700"
+            >
+              {siteConfig.phoneDisplay}
+            </a>
+          </p>
+        )}
       </div>
     </section>
   );
