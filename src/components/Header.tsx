@@ -42,13 +42,21 @@ export default function Header() {
             ))}
           </nav>
 
-          <details className="relative lg:hidden">
-            <summary className="flex cursor-pointer list-none items-center rounded-lg border border-slate-200 px-2.5 py-1.5 text-xs font-semibold text-slate-700 [&::-webkit-details-marker]:hidden">
+          <div className="relative lg:hidden">
+            <button
+              type="button"
+              id="menu-button"
+              aria-expanded="false"
+              aria-controls="menu-mobile"
+              className="rounded-lg border border-slate-200 px-2.5 py-1.5 text-xs font-semibold text-slate-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600"
+            >
               Menu
-            </summary>
+            </button>
             <nav
-              className="absolute right-0 z-50 mt-2 w-44 rounded-lg border border-slate-200 bg-white p-1 shadow-lg"
+              id="menu-mobile"
+              hidden
               aria-label="Seções"
+              className="absolute right-0 z-50 mt-2 w-44 rounded-lg border border-slate-200 bg-white p-1 shadow-lg"
             >
               {navLinks.map((link) => (
                 <a key={link.href} href={link.href} className={linkClass}>
@@ -56,7 +64,7 @@ export default function Header() {
                 </a>
               ))}
             </nav>
-          </details>
+          </div>
 
           <a
             href={whatsappUrl('navbar')}

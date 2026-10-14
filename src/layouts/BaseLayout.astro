@@ -61,13 +61,29 @@ const {
     <TrackInteractions />
     <CookieConsent measurementId={measurementId} />
     <script>
-      document.addEventListener('click', (event) => {
+      const menuButton = document.getElementById('menu-button');
+      const menuPanel = document.getElementById('menu-mobile');
+
+      function setMenuOpen(open: boolean) {
+        if (!(menuButton instanceof HTMLButtonElement)) return;
+        if (!(menuPanel instanceof HTMLElement)) return;
+        menuButton.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) menuPanel.removeAttribute('hidden');
+        else menuPanel.setAttribute('hidden', '');
+      }
+
+      menuButton?.addEventListener('click', () => {
+        setMenuOpen(menuButton.getAttribute('aria-expanded') !== 'true');
+      });
+
+      menuPanel?.addEventListener('click', (event) => {
         const target = event.target;
         if (!(target instanceof Element)) return;
-        const link = target.closest('header details a[href^="#"]');
-        if (!link) return;
-        const details = link.closest('details');
-        if (details instanceof HTMLDetailsElement) details.open = false;
+        if (target.closest('a')) setMenuOpen(false);
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') setMenuOpen(false);
       });
     </script>
   </body>
