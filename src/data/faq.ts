@@ -32,7 +32,7 @@ export const faqItems = [
   {
     question: 'Como pago a criação do site?',
     answer:
-      'A criação do site pode ser paga por PIX ou cartão. O valor final e as condições ficam na proposta.',
+      'A criação do site é paga por PIX ou cartão em até 12x. Não há reembolso dos valores pagos.',
   },
   {
     question: 'Como funciona o plano mensal e como cancelo?',

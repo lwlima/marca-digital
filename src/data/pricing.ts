@@ -19,8 +19,7 @@ export const pricingPlans = [
       'Configuração de Analytics',
       '2h/mês de alterações',
       'Domínio, e-mail, SSL e backup',
-      'Suporte de segunda a sexta',
-      // CONFIRMAR antes de publicar: "Suporte de segunda a sexta, em horário comercial"
+      'Suporte de segunda a sexta, em horário comercial',
     ],
   },
   {
@@ -38,8 +37,7 @@ export const pricingPlans = [
       'Configuração de Analytics',
       '3h/mês de alterações',
       'Domínio, e-mail, SSL e backup',
-      'Suporte de segunda a sexta',
-      // CONFIRMAR antes de publicar: "Suporte de segunda a sexta, em horário comercial"
+      'Suporte de segunda a sexta, em horário comercial',
     ],
   },
   {
