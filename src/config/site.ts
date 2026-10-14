@@ -95,8 +95,8 @@ export const siteConfig = {
 export const problemStats = {
   slowLoadSeconds: '3',
   finding:
-    'Estudo do Google com a Deloitte: melhorar o carregamento mobile em apenas 0,1 segundo foi associado a +8,4% de conversão em sites de varejo.',
-  sourceLabel: 'Google/Deloitte, Milliseconds Make Millions',
+    'Estudo do Google com a Deloitte (37 marcas, mais de 30 milhões de sessões): ganhar 0,1 segundo nas métricas de velocidade mobile foi associado a +8,4% de conversão em sites de varejo.',
+  sourceLabel: 'Google/Deloitte, Milliseconds Make Millions (2020)',
   sourceUrl: 'https://web.dev/case-studies/milliseconds-make-millions',
 } as const;
 
