@@ -25,9 +25,24 @@ export const faqItems = [
       'É um serviço opcional para quem já tem site: você envia seu nome e o link pelo WhatsApp e, em até 24 horas úteis, eu mando um PDF com apontamentos do PageSpeed. Não inclui correções. Ele serve para indicar o melhor caminho para o seu caso.',
   },
   {
-    question: 'Como funciona o pagamento mensal e o anual?',
+    question: 'Como funciona o plano mensal e como cancelo?',
     answer:
-      'No mensal você paga o valor cheio e fica comigo enquanto quiser — sem fidelidade —, bastando avisar com 30 dias para cancelar. No anual, há desconto: 15% no PIX à vista ou 5% no cartão em até 12x. Se cancelar o plano anual antes do fim, não há reembolso: o acesso aos serviços continua até completar os 12 meses já pagos. Alterações e gestão do Perfil da Empresa no Google consomem a franquia de horas do pacote; horas não usadas não acumulam; excedente custa R$ 100/h. Condições completas constam na proposta/contrato.',
+      'No plano mensal você paga o valor cheio, sem fidelidade. Para cancelar, basta avisar com 30 dias de antecedência.',
+  },
+  {
+    question: 'Como funciona o plano anual?',
+    answer:
+      'Tem desconto: 15% no PIX à vista ou 5% no cartão em até 12x. Se cancelar antes do fim, não há reembolso, mas os serviços continuam ativos até completar os 12 meses já pagos.',
+  },
+  {
+    question: 'Como funcionam as horas de alteração?',
+    answer:
+      'Alterações e a gestão do Perfil da Empresa no Google consomem a franquia de horas do plano. Horas não usadas não acumulam para o mês seguinte. Horas extras custam R$ 100/h, com aprovação prévia. As condições completas constam na proposta/contrato.',
+  },
+  {
+    question: 'O site e o domínio ficam no meu nome?',
+    answer:
+      'O domínio fica sempre no seu nome. Com o setup quitado, o site entregue é seu. Se você encerrar a mensalidade, entrego o backup dos arquivos em até 10 dias úteis, conforme o contrato.',
   },
   {
     question: 'Em quanto tempo os resultados aparecem?',
