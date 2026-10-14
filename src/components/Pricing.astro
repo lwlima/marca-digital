@@ -48,19 +48,16 @@ import { whatsappUrl } from '../config/site';
             )}
 
             <h3 class="text-xl font-bold text-slate-900">{plan.name}</h3>
+            {'blurb' in plan && plan.blurb && (
+              <p class="mt-1 text-sm text-slate-500">{plan.blurb}</p>
+            )}
             <p class="mt-1 text-sm text-slate-600">{plan.idealFor}</p>
-            <p class="mt-1 text-sm text-slate-500">{plan.blurb}</p>
 
             <div class="mt-6">
               <p class="text-xs font-medium text-slate-400">Criação do site</p>
               <p class="mt-1 text-3xl font-bold tracking-tight text-slate-900">
                 <span class="text-sm font-medium text-slate-400">a partir de</span>{' '}{formatBRL(plan.setupFrom)}
               </p>
-              {'setupNote' in plan && plan.setupNote && (
-                <p class="mt-1.5 text-xs leading-snug text-slate-500">
-                  {plan.setupNote}
-                </p>
-              )}
             </div>
 
             <div class="mt-4 rounded-lg bg-brand-50 px-3 py-2.5">
@@ -121,7 +118,7 @@ import { whatsappUrl } from '../config/site';
       <div>
         <p class="font-semibold text-slate-900">Sistemas / E-commerce</p>
         <p class="mt-1 text-sm text-slate-500">
-          Escopo personalizado — setup e mensalidade sob orçamento
+          Escopo personalizado — criação e mensalidade sob orçamento
         </p>
       </div>
       <a

@@ -73,7 +73,7 @@ export default function Problem() {
             não é apenas um &ldquo;detalhe&rdquo;. É o caminho mais curto para o
             seu cliente chegar ao concorrente. Se o seu site não carrega em
             menos de 3 segundos ou não facilita o contato via WhatsApp, você
-            está perdendo vendas todos os dias.
+            provavelmente está perdendo contatos todos os dias.
           </p>
           <a
             href={whatsappUrl('problem')}

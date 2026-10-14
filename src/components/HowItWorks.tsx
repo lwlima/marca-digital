@@ -74,7 +74,7 @@ export default function HowItWorks() {
         </ol>
 
         <p className="mt-8 rounded-xl border border-brand-100 bg-brand-50 px-5 py-4 text-center text-sm leading-relaxed text-slate-700 sm:text-base">
-          Valores de referência na seção Serviços. Proposta fechada no WhatsApp.
+          Valores de referência na seção Quanto custa. Proposta fechada no WhatsApp.
         </p>
       </div>
     </section>

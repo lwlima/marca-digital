@@ -42,7 +42,7 @@ export const faqItems = [
   {
     question: 'O site e o domínio ficam no meu nome?',
     answer:
-      'O domínio fica sempre no seu nome. Com o setup quitado, o site entregue é seu. Se você encerrar a mensalidade, entrego o backup dos arquivos em até 10 dias úteis, conforme o contrato.',
+      'O domínio fica sempre no seu nome. Com o valor da criação do site quitado, o site entregue é seu. Se você encerrar a mensalidade, entrego o backup dos arquivos em até 10 dias úteis, conforme o contrato.',
   },
   {
     question: 'Em quanto tempo os resultados aparecem?',
