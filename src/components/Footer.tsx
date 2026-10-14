@@ -16,6 +16,11 @@ export default function Footer() {
             {' '}
             ·{' '}
           </span>
+          {siteConfig.legalName}
+          <span className="text-brand-700" aria-hidden="true">
+            {' '}
+            ·{' '}
+          </span>
           CNPJ {siteConfig.cnpj}
         </p>
         <p className="mt-2 flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
