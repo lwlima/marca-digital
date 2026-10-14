@@ -18,7 +18,7 @@ const highlights = [
     icon: MessageCircle,
     title: '5 anos de experiência na web',
     description:
-      'Há 5 anos ajudo empresas a resolver problemas na web. Hoje uso essa experiência para quem quer vender mais, sem termos complicados.',
+      'Há 5 anos ajudo empresas a resolver problemas na web. Hoje uso essa experiência para quem quer vender mais, não para impressionar com termos complicados.',
   },
 ] as const;
 

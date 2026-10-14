@@ -79,7 +79,7 @@ export const siteConfig = {
   ctaMidLabel: 'Falar sobre meu projeto',
   ctaMidTitle: 'Pronto para receber mais contatos?',
   ctaMidDescription:
-    'Sites feitos para converter no celular, com hospedagem e manutenção inclusos. Fale no WhatsApp e monto a proposta.',
+    'Sites feitos para converter no celular, com hospedagem e manutenção inclusos. Fale no WhatsApp e eu monto a proposta.',
   ctaFinalLabel: 'Falar no WhatsApp',
   ctaFinalTitle: 'Vamos tirar seu projeto do papel?',
   ctaFinalDescription:
