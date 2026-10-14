@@ -36,6 +36,19 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preload" as="font" type="font/woff2" href={interLatin400} crossorigin="anonymous" />
     <link rel="preload" as="font" type="font/woff2" href={interLatin800} crossorigin="anonymous" />
+    {
+      path === '/' && (
+        <link
+          rel="preload"
+          as="image"
+          type="image/webp"
+          href="/hero-1280.webp"
+          imagesrcset="/hero-640.webp 640w, /hero-960.webp 960w, /hero-1280.webp 1280w, /hero-1600.webp 1600w"
+          imagesizes="100vw"
+          fetchpriority="high"
+        />
+      )
+    }
     <link rel="icon" href={siteConfig.assets.favicon} type="image/svg+xml" />
     <link rel="icon" type="image/png" sizes="32x32" href={siteConfig.assets.favicon32} />
     <link rel="icon" type="image/png" sizes="192x192" href={siteConfig.assets.favicon192} />
