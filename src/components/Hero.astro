@@ -15,6 +15,16 @@ const heroSrcSet = [
 ].join(', ');
 ---
 
+<link
+  rel="preload"
+  as="image"
+  type="image/webp"
+  href="/hero-1280.webp"
+  imagesrcset={heroSrcSet}
+  imagesizes="100vw"
+  fetchpriority="high"
+/>
+
 <section
   id="inicio"
   class="relative overflow-hidden bg-brand-950 text-white"

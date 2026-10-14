@@ -13,4 +13,5 @@ interface Window {
   dataLayer?: unknown[];
   gtag?: (...args: unknown[]) => void;
   __marcaDigitalAnalyticsLoaded?: boolean;
+  __marcaDigitalConsentDefault?: boolean;
 }
