@@ -32,8 +32,7 @@ export const faqItems = [
   {
     question: 'Como pago a criação do site?',
     answer:
-      'A criação do site é paga por PIX ou cartão. Após o início do desenvolvimento, o valor pago não é reembolsável. As condições finais ficam na proposta.',
-      // CONFIRMAR: se o parcelamento da criação for em até 12x, usar "PIX ou cartão em até 12x".
+      'A criação do site é paga por PIX ou cartão em até 12x. Após o início do desenvolvimento, o valor pago não é reembolsável. As condições finais ficam na proposta.',
   },
   {
     question: 'Como funciona o plano mensal e como cancelo?',

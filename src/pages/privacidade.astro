@@ -67,19 +67,18 @@ import { siteConfig } from '../config/site';
         <p class="mt-3">
           O Google Analytics pode processar dados em servidores fora do Brasil, nos termos da política do Google.
         </p>
-        <!--
-          CONFIRMAR Cloudflare Web Analytics antes de publicar. O beacon não está no código:
-          a Cloudflare injeta static.cloudflareinsights.com/beacon.min.js pelo painel.
-          A) Manter o beacon e acrescentar: "Infraestrutura e métricas sem cookies: o site usa a Cloudflare (CDN, segurança e Web Analytics sem cookies), que pode processar dados técnicos como IP, navegador e página acessada."
-          B) Desativar o Web Analytics no painel da Cloudflare e não mencionar nesta Política.
-        -->
+        <p class="mt-3">
+          Infraestrutura e métricas sem cookies: o site usa a Cloudflare (CDN, segurança e Web
+          Analytics sem cookies), que pode processar dados técnicos como IP, navegador e página
+          acessada.
+        </p>
       </section>
 
       <section>
         <h2 class="text-xl font-semibold text-slate-900">5. Compartilhamento</h2>
         <p>
           Não vendemos dados pessoais. Podemos compartilhar informações apenas com
-          provedores necessários à operação (ex.: hospedagem, Google Analytics) e quando
+          provedores necessários à operação (ex.: hospedagem, Cloudflare, Google Analytics) e quando
           exigido por lei.
         </p>
       </section>

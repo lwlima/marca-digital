@@ -32,8 +32,7 @@ Prazo de entrega conta a partir do pagamento do setup (conforme combinado) **e**
 - Anual: sem reembolso; serviços até o fim do ciclo pago.
 
 ## Suporte
-- Landing / Institucional: segunda a sexta (horário comercial a definir, ex. 9h–18h).  
-- Completo: segunda a domingo (horário comercial; emergências de downtime conforme disponibilidade).
+- Todos os planos: segunda a domingo, das 8h às 17h (horário de Brasília).
 
 ## Confidencialidade e LGPD
 Tratamento de dados conforme necessidade do serviço e Política de Privacidade do site. Cliente garante legitimidade dos dados/materiais enviados.
