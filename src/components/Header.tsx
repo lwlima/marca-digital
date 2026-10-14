@@ -34,7 +34,7 @@ export default function Header() {
         </a>
 
         <div className="flex items-center gap-2 sm:gap-4">
-          <nav className="hidden items-center gap-5 lg:flex" aria-label="Seções">
+          <nav className="hidden items-center gap-5 lg:flex" aria-label="Seções da página">
             {navLinks.map((link) => (
               <a key={link.href} href={link.href} className={linkClass}>
                 {link.label}
@@ -55,7 +55,8 @@ export default function Header() {
             <nav
               id="menu-mobile"
               hidden
-              aria-label="Seções"
+              inert
+              aria-label="Menu da página"
               className="absolute right-0 z-50 mt-2 w-44 rounded-lg border border-slate-200 bg-white p-1 shadow-lg"
             >
               {navLinks.map((link) => (
